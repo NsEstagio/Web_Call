@@ -1,0 +1,6 @@
+.authentication-bg {
+    background-image: url("../images/city-bg.jpeg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+  }

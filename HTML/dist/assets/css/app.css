@@ -36341,6 +36341,10 @@ readers do not read off random characters that represent icons */
   display: flex;
 }
 
+.authentication2-bg{
+  background-color: #38c66c;
+}
+
 .auth-form-group-custom {
   position: relative;
 }
