@@ -5926,7 +5926,7 @@ Editableform based on Twitter Bootstrap 3
 		forceParse: true,
 		format: 'mm/dd/yyyy',
 		keyboardNavigation: true,
-		language: 'en',
+		language: 'pt-br',
 		minViewMode: 0,
 		rtl: false,
 		startDate: -Infinity,
@@ -5943,7 +5943,13 @@ Editableform based on Twitter Bootstrap 3
 	$.fn.datepicker.Constructor = Datepicker;
 	var dates = $.fn.datepicker.dates = {
 		en: {
-			days: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+			days: ["Domingo",
+      "Segunda",
+      "Terça",
+      "Quarta",
+      "Quinta",
+      "Sexta",
+      "Sábado"],
 			daysShort: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
 			daysMin: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"],
 			months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
@@ -6233,7 +6239,7 @@ $(function(){
             });
             
             //language
-            this.options.datepicker.language = this.options.datepicker.language || 'en'; 
+            this.options.datepicker.language = this.options.datepicker.language || 'pt-br'; 
 
             //store DPglobal
             this.dpg = $.fn.bdatepicker.DPGlobal; 
@@ -6543,7 +6549,7 @@ $(function(){
             });
 
             //language
-            this.options.datetimepicker.language = this.options.datetimepicker.language || 'en'; 
+            this.options.datetimepicker.language = this.options.datetimepicker.language || 'pt-br'; 
 
             //store DPglobal
             this.dpg = $.fn.datetimepicker.DPGlobal; 

@@ -15234,12 +15234,12 @@ function __mlHelper (localeString) {
 		// Luxon and Moment support
 		// Argument shifting
 		if ( arguments.length === 0 ) {
-			locale = 'en';
+			locale = 'pt-br';
 			to = null; // means toLocaleString
 			from = null; // means iso8601
 		}
 		else if ( arguments.length === 1 ) {
-			locale = 'en';
+			locale = 'pt-br';
 			to = from;
 			from = null;
 		}

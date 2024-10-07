@@ -32,10 +32,10 @@ var chartColumnStacked100Colors = getChartColorsArray("sales_figures");
 if (chartColumnStacked100Colors) {
     var options = {
         series: [{
-            name: 'New users',
+            name: 'Novos users',
             data: [44, 55, 41, 67, 22, 43, 21, 49, 30, 18, 46, 78, 34, 52],
         }, {
-            name: 'Unique users',
+            name: 'Usuários únicos',
             data: [13, 23, 20, 8, 13, 27, 33, 12, 10, 18, 22, 5, 10, 14]
         }],
         dataLabels: {
@@ -136,8 +136,8 @@ if (chartColumnStacked100Colors) {
             }
         }],
         xaxis: {
-            categories: ['Jan', 'Feb', 'March', 'April', 'May', 'June',
-                'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+            categories: ['Jan', 'Feb', 'Março', 'Abril', 'Maio', 'Junho',
+                'Julho', 'Agos', 'Set', 'Out', 'Nov', 'Dez'
             ],
         },
         fill: {
@@ -186,7 +186,7 @@ if (chartPiePatternColors) {
                 }
             }
         },
-        labels: ["Comedy", "Action", "SciFi", "Drama", "Horror"],
+        labels: ["Comédia", "Ação", "SciFi", "Drama", "Terror"],
         dataLabels: {
             enabled: false
         },
@@ -264,7 +264,7 @@ if (chartSemiDonutColors) {
         legend: {
             show: false
         },
-        labels: ['Earnings', 'Expenses'],
+        labels: ['Ganhos', 'Gastos'],
         colors: chartSemiDonutColors,
         responsive: [{
             breakpoint: 480,
