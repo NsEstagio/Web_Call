@@ -1,3 +1,9 @@
+$('#modal8').on('shown.bs.modal', function () {
+    $('.estados-select').select2({
+        dropdownParent: $('#modal8')
+    });
+});
+
 const estados = [
     { sigla: "AC", nome: "Acre" },
     { sigla: "AL", nome: "Alagoas" },
@@ -36,3 +42,4 @@ document.querySelectorAll('.estado-select').forEach(select => {
         select.appendChild(option);
     });
 });
+

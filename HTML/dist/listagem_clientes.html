@@ -31,7 +31,9 @@
         <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
 
         <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.css" />
-        
+
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
     </head>
 
     <body>
@@ -713,9 +715,7 @@
                             <div class="card">
                                 <div class="card-body">
                                     <div class="col-12 mb-5">
-                                        <form class="" action="cadastro-clientes.html">
-                                            <button class="btn btn-outline-primary float-end"  type="submit">Cadastrar Novo Cliente</button>
-                                        </form>
+                                        <button class="btn btn-outline-primary float-end" data-bs-toggle="modal" data-bs-target="#modal8">Cadastrar Novo Cliente</button>
                                     </div>
                                     <table id="alternative-page-datatable" class="table table-hover table-striped dt-responsive nowrap w-100">
                                             <thead>
@@ -1023,6 +1023,104 @@
                         </div><!-- end col-->
                     </div>
                     <!-- end row-->
+                    <div class="modal fade " id="modal8">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content ">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Cadastro de Clientes</h5><button type="button" class="btn btn-sm btn-label-danger btn-icon" data-bs-dismiss="modal"><i class="mdi mdi-close"></i></button>
+                                </div>
+                                    <div class="card-body">
+                        
+                                        <div class="nav nav-pills nav-justified widgets-nav mb-4" id="income-tab">
+                                            <a class="nav-item nav-link active" id="pessoa-fisica-tab" data-bs-toggle="tab" href="#pessoa-fisica">Pessoa Física</a>
+                                            <a class="nav-item nav-link" id="pessoa-juridica-tab" data-bs-toggle="tab" href="#pessoa-juridica">Pessoa Jurídica</a>
+                                        </div>
+                                    
+                                    <div class="tab-content p-0" id="income-tabContent">
+                                        <div class="tab-pane fade show active" id="pessoa-fisica">
+                                            <div class="col-xl-12" >
+                                                <div class="card">
+                                                    <div class="card-body mt-3 mb-3">
+                                                        <form class="row g-3">
+                                                            <div class="col-md-6"><label for="nome" class="form-label">Nome</label> <input type="text" class="form-control" id="nome" placeholder="Nome" required></div>
+                                                            <div class="col-md-6"><label for="sobrenome" class="form-label">Sobrenome</label> <input type="text" class="form-control" id="sobrenome" placeholder="Sobrenome" required></div>
+                                                            <div class="col-md-6"><label for="cpf" class="form-label">CPF</label> <input type="text" class="form-control" id="cpf" required></div>
+                                                            <div class="col-md-6"><label for="data_nascimento" class="form-label">Data de Nascimento</label> <input type="text" class="form-control" id="datepicker-1" required></div>
+                                                            <div class="col-md-6">
+                                                                <label for="email" >Email</label>
+                                                                <div class="input-group mt-0">
+                                                                    <div class="input-group-text">
+                                                                        <i class="fa fa-envelope"></i>
+                                                                    </div>
+                                                                    <input type="email" class="form-control" name="email" placeholder="Insira seu Email"  required/>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6"><label for="telefone">Telefone</label> <input data-parsley-type="number" type="text" id="telefone" class="form-control" required placeholder="Somente números" /></div>
+                                                            <div class="col-md-2"><label for="cep" class="form-label">CEP</label> <input type="text" class="form-control" id="cep" required/></div>
+                                                            <div class="col-md-6"><label for="endereco" class="form-label">Endereço</label> <input type="text" class="form-control" id="endereco" required placeholder="Rua" /></div>
+                                                            <div class="col-md-2"><label for="numero" class="form-label">Número</label> <input type="text" class="form-control" id="numero" required /></div>
+                                                            <div class="col-md-2"><label for="complemento" class="form-label">Complemento</label> <input type="text" class="form-control" id="complemento" /></div>
+                                                            <div class="col-md-4"><label for="bairro" class="form-label">Bairro</label> <input type="text" class="form-control" id="bairro" required /></div>
+                                                            <div class="col-md-4"><label for="cidade" class="form-label">Cidade</label> <input type="text" class="form-control" id="cidade" required/></div>
+                                                            <div class="dropup col-md-4">
+                                                                <label for="estados2" class="form-label">Estado</label>
+                                                                <select id="estados2" name="estados2" class="form-select estado-select" required="required">
+                                                                    <option selected="selected">Selecione</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-10 mt-4"><button type="submit" class="btn btn-primary btn-widest btn-lg float-end">Cadastrar</button></div>
+                                                            <div class="col-2 mt-4"><button data-bs-dismiss="modal" class="btn btn-outline-danger btn-widest btn-lg float-end">Cancelar</button></div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div> <!-- end col -->
+                                        </div>
+                                    </div>
+                                    <div class="tab-content p-0" id="income-tabContent">
+                                        <div class="tab-pane fade" id="pessoa-juridica">
+                                            <div class="col-xl-12" >
+                                            <div class="card">
+                                                <div class="card-body mt-3 mb-3">
+                                                    <form class="row g-3">
+                                                        <div class="col-md-6"><label for="razao_social" class="form-label">Razão Social</label> <input type="text" class="form-control" id="razao_social" required></div>
+                                                        <div class="col-md-6"><label for="representante_legal" class="form-label">Representante Legal</label> <input type="text" class="form-control" id="representante_legal" required></div>
+                                                        <div class="col-md-6"><label for="cnpj" class="form-label">CNPJ</label> <input type="text" class="form-control" id="cnpj" required></div>
+                                                        <div class="col-md-6"><label for="data_fundacao" class="form-label">Data de Fundação</label> <input type="text" class="form-control" id="datepicker-1" required></div>
+                                                        <div class="col-md-6">
+                                                            <label for="email" >Email</label>
+                                                            <div class="input-group mt-0">
+                                                                <div class="input-group-text">
+                                                                    <i class="fa fa-envelope"></i>
+                                                                </div>
+                                                                <input type="email" class="form-control" name="email" placeholder="Insira seu Email"  required/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6"><label for="telefone">Telefone</label> <input data-parsley-type="number" type="text" id="telefone" class="form-control" required placeholder="Somente números" /></div>
+                                                        <div class="col-md-2"><label for="cep" class="form-label">CEP</label> <input type="text" class="form-control" id="cep" required /></div>
+                                                        <div class="col-md-6"><label for="endereco" class="form-label">Endereço</label> <input type="text" class="form-control" id="endereco" placeholder="Rua" required/></div>
+                                                        <div class="col-md-2"><label for="numero" class="form-label">Número</label> <input type="text" class="form-control" id="numero"  required/></div>
+                                                        <div class="col-md-2"><label for="complemento" class="form-label">Complemento</label> <input type="text" class="form-control" id="complemento" /></div>
+                                                        <div class="col-md-4"><label for="bairro" class="form-label">Bairro</label> <input type="text" class="form-control" id="bairro" required/></div>
+                                                        <div class="col-md-4"><label for="cidade" class="form-label">Cidade</label> <input type="text" class="form-control" id="cidade" required/></div>
+                                                        <div class="dropup col-md-4">
+                                                            <label for="estados2" class="form-label">Estado</label>
+                                                            <select id="estados2" name="estados2" class="form-select estado-select" required="required">
+                                                                <option selected="selected">Selecione</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-10 mt-4"><button type="submit" class="btn btn-primary btn-widest btn-lg float-end">Cadastrar</button></div>
+                                                        <div class="col-2 mt-4"><button data-bs-dismiss="modal" class="btn btn-outline-danger btn-widest btn-lg float-end">Cancelar</button></div>
+                                                    </form>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div> <!-- end col -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!-- container-fluid -->
             </div>
@@ -1246,9 +1344,9 @@
             </div>
         </div> <!-- end card-->
     </div>
-    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <!-- JAVASCRIPT -->
-    
     <script src="assets/libs/jquery/jquery.min.js"></script>
     <script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
     <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -1287,7 +1385,7 @@
 
    
     </script>
-
+    <script src="assets/js/function.js"></script>
     <script src="assets/js/app.js"></script>
 
     </body>
