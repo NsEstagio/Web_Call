@@ -50,3 +50,18 @@ $(document).ready(function() {
 });
 
 
+$(document).ready(function() {
+    $('#modalCadastrarNF').on('shown.bs.modal', function () {
+        $('#datepicker-2').datepicker({
+            // Suas opções do datepicker
+            format: "dd/mm/yyyy",
+            startDate: "01-01-2015",
+            endDate: "01-01-2020",
+            todayBtn: "linked",
+            autoclose: true,
+            todayHighlight: true
+        });
+    });
+});
+
+

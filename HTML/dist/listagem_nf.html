@@ -10,7 +10,6 @@
         <meta content="Codebucks" name="author" />
         <!-- App favicon -->
         <link rel="shortcut icon" href="assets/images/favicon.ico">
-        
 
         <!-- DataTables -->
         <link href="assets/libs/datatables.net-bs5/css/dataTables.bootstrap5.min.css" rel="stylesheet" type="text/css" />
@@ -33,7 +32,8 @@
         <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.css" />
 
         <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-        <link href="assets/libs/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
+
+        <link href="assets/css/style.css"  rel="stylesheet" type="text/css" />
 
     </head>
 
@@ -646,7 +646,7 @@
         <!-- ============================================================== -->
         <!-- Start right Content here -->
         <!-- ============================================================== -->
-        <div class="main-content">
+        <div class="main-content" style="overflow-x: auto;">
             <div class="page-content">
                 <div class="container-fluid">
                     <!-- start page title -->
@@ -668,410 +668,304 @@
                     <!-- end page title -->
                     <div class="row">
                         <div class="col-12">
-                            <div class="card">
+                            <div class="card" style="width: 140%;">
                                 <div class="card-body">
                                     <div class="col-12 mb-5">
-                                        <button class="btn btn-outline-primary float-end" data-bs-toggle="modal" data-bs-target="#modalCadastrarCliente">Cadastrar Novo Cliente</button>
+                                        <button class="btn btn-outline-primary float-end" data-bs-toggle="modal" data-bs-target="#modalCadastrarNF">Importar Nota Fiscal</button>
                                     </div>
-                                    <table id="alternative-page-datatable" class="table table-hover table-striped dt-responsive nowrap w-100">
-                                            <thead>
-                                                <tr>
-                                                    <th>Nome ou Razão Social</th>
-                                                    <th>CPF ou CNPJ</th>
-                                                    <th>Email</th>
-                                                    <th>Telefone</th>
-                                                    <th>Cidade</th>
-                                                    <th>Estado</th>
-                                                    <th>Tipo de Pessoa</th>
-                                                    <th>Ações</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>Gloria Little</td>
-                                                    <td>123.456.789-10</td>
-                                                    <td>gloria.little@email.com</td>
-                                                    <td>(21) 98765-4321</td>
-                                                    <td>New York</td>
-                                                    <td>NY</td>
-                                                    <td>Física</td>
-                                                    <td>
-                                                        <button type="button" class="btn btn-label-primary fas fa-eye" data-bs-toggle="modal" data-bs-target="#modalMostrarCliente" ></button>
-                                                        <button type="button" class="btn btn-label-primary fas fa-edit" data-bs-toggle="modal" data-bs-target="#modalEditCliente" ></button>
-                                                        <button type="button" class="btn btn-label-primary fas fa-trash-alt" data-bs-toggle="modal" data-bs-target="#modalExcluirCliente"  ></button>
-                                                        <button type="button" class="btn btn-label-primary fas fa-user-alt-slash" data-bs-toggle="modal" data-bs-target="#modalBloquearCliente"  ></button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Bradley Greer</td>
-                                                    <td>987.654.321-00</td>
-                                                    <td>bradley.greer@email.com</td>
-                                                    <td>(11) 99876-5432</td>
-                                                    <td>London</td>
-                                                    <td>LND</td>
-                                                    <td>Física</td>
-                                                    <td>
-                                                        <button type="button" class="btn btn-label-primary fas fa-eye" data-bs-toggle="modal" data-bs-target="#modalMostrarCliente" ></button>
-                                                        <button type="button" class="btn btn-label-primary fas fa-edit" data-bs-toggle="modal" data-bs-target="#modalEditCliente" ></button>
-                                                        <button type="button" class="btn btn-label-primary fas fa-trash-alt" data-bs-toggle="modal" data-bs-target="#modalExcluirCliente"  ></button>
-                                                        <button type="button" class="btn btn-label-primary fas fa-user-alt-slash" data-bs-toggle="modal" data-bs-target="#modalBloquearCliente"  ></button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Dai Rios</td>
-                                                    <td>456.789.123-22</td>
-                                                    <td>dai.rios@email.com</td>
-                                                    <td>(15) 91234-5678</td>
-                                                    <td>Edinburgh</td>
-                                                    <td>EDI</td>
-                                                    <td>Física</td>
-                                                    <td>
-                                                        <button type="button" class="btn btn-label-primary fas fa-eye" data-bs-toggle="modal" data-bs-target="#modalMostrarCliente" ></button>
-                                                        <button type="button" class="btn btn-label-primary fas fa-edit" data-bs-toggle="modal" data-bs-target="#modalEditCliente" ></button>
-                                                        <button type="button" class="btn btn-label-primary fas fa-trash-alt" data-bs-toggle="modal" data-bs-target="#modalExcluirCliente"  ></button>
-                                                        <button type="button" class="btn btn-label-primary fas fa-user-alt-slash" data-bs-toggle="modal" data-bs-target="#modalBloquearCliente"  ></button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Jenette Caldwell</td>
-                                                    <td>321.654.987-11</td>
-                                                    <td>jenette.caldwell@email.com</td>
-                                                    <td>(13) 97654-3210</td>
-                                                    <td>New York</td>
-                                                    <td>NY</td>
-                                                    <td>Física</td>
-                                                    <td>
-                                                        <button type="button" class="btn btn-label-primary fas fa-eye" data-bs-toggle="modal" data-bs-target="#modalMostrarCliente" ></button>
-                                                        <button type="button" class="btn btn-label-primary fas fa-edit" data-bs-toggle="modal" data-bs-target="#modalEditCliente" ></button>
-                                                        <button type="button" class="btn btn-label-primary fas fa-trash-alt" data-bs-toggle="modal" data-bs-target="#modalExcluirCliente"  ></button>
-                                                        <button type="button" class="btn btn-label-primary fas fa-user-alt-slash" data-bs-toggle="modal" data-bs-target="#modalBloquearCliente"  ></button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Yuri Berry</td>
-                                                    <td>654.321.987-44</td>
-                                                    <td>yuri.berry@email.com</td>
-                                                    <td>(12) 96543-2109</td>
-                                                    <td>New York</td>
-                                                    <td>NY</td>
-                                                    <td>Física</td>
-                                                    <td>
-                                                        <button type="button" class="btn btn-label-primary fas fa-eye" data-bs-toggle="modal" data-bs-target="#modalMostrarCliente" ></button>
-                                                        <button type="button" class="btn btn-label-primary fas fa-edit" data-bs-toggle="modal" data-bs-target="#modalEditCliente" ></button>
-                                                        <button type="button" class="btn btn-label-primary fas fa-trash-alt" data-bs-toggle="modal" data-bs-target="#modalExcluirCliente"  ></button>
-                                                        <button type="button" class="btn btn-label-primary fas fa-user-alt-slash" data-bs-toggle="modal" data-bs-target="#modalBloquearCliente"  ></button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Caesar Vance</td>
-                                                    <td>678.910.111-33</td>
-                                                    <td>caesar.vance@email.com</td>
-                                                    <td>(14) 93210-9876</td>
-                                                    <td>New York</td>
-                                                    <td>NY</td>
-                                                    <td>Física</td>
-                                                    <td>
-                                                        <button type="button" class="btn btn-label-primary fas fa-eye" data-bs-toggle="modal" data-bs-target="#modalMostrarCliente" ></button>
-                                                        <button type="button" class="btn btn-label-primary fas fa-edit" data-bs-toggle="modal" data-bs-target="#modalEditCliente" ></button>
-                                                        <button type="button" class="btn btn-label-primary fas fa-trash-alt" data-bs-toggle="modal" data-bs-target="#modalExcluirCliente"  ></button>
-                                                        <button type="button" class="btn btn-label-primary fas fa-user-alt-slash" data-bs-toggle="modal" data-bs-target="#modalBloquearCliente"  ></button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Doris Wilder</td>
-                                                    <td>234.567.890-12</td>
-                                                    <td>doris.wilder@email.com</td>
-                                                    <td>(19) 99870-5643</td>
-                                                    <td>Sidney</td>
-                                                    <td>SYD</td>
-                                                    <td>Física</td>
-                                                    <td>
-                                                        <button type="button" class="btn btn-label-primary fas fa-eye" data-bs-toggle="modal" data-bs-target="#modalMostrarCliente" ></button>
-                                                        <button type="button" class="btn btn-label-primary fas fa-edit" data-bs-toggle="modal" data-bs-target="#modalEditCliente" ></button>
-                                                        <button type="button" class="btn btn-label-primary fas fa-trash-alt" data-bs-toggle="modal" data-bs-target="#modalExcluirCliente"  ></button>
-                                                        <button type="button" class="btn btn-label-primary fas fa-user-alt-slash" data-bs-toggle="modal" data-bs-target="#modalBloquearCliente"  ></button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Angelica Ramos</td>
-                                                    <td>12.345.678/0001-99</td>
-                                                    <td>angelica.ramos@empresa.com</td>
-                                                    <td>(11) 98760-1234</td>
-                                                    <td>London</td>
-                                                    <td>LND</td>
-                                                    <td>Jurídica</td>
-                                                    <td>
-                                                        <button type="button" class="btn btn-label-primary fas fa-eye" data-bs-toggle="modal" data-bs-target="#modalMostrarCliente" ></button>
-                                                        <button type="button" class="btn btn-label-primary fas fa-edit" data-bs-toggle="modal" data-bs-target="#modalEditCliente" ></button>
-                                                        <button type="button" class="btn btn-label-primary fas fa-trash-alt" data-bs-toggle="modal" data-bs-target="#modalExcluirCliente"  ></button>
-                                                        <button type="button" class="btn btn-label-primary fas fa-user-alt-slash" data-bs-toggle="modal" data-bs-target="#modalBloquearCliente"  ></button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Gavin Joyce</td>
-                                                    <td>789.012.345-67</td>
-                                                    <td>gavin.joyce@email.com</td>
-                                                    <td>(16) 92134-7890</td>
-                                                    <td>Edinburgh</td>
-                                                    <td>EDI</td>
-                                                    <td>Física</td>
-                                                    <td>
-                                                        <button type="button" class="btn btn-label-primary fas fa-eye" data-bs-toggle="modal" data-bs-target="#modalMostrarCliente" ></button>
-                                                        <button type="button" class="btn btn-label-primary fas fa-edit" data-bs-toggle="modal" data-bs-target="#modalEditCliente" ></button>
-                                                        <button type="button" class="btn btn-label-primary fas fa-trash-alt" data-bs-toggle="modal" data-bs-target="#modalExcluirCliente"  ></button>
-                                                        <button type="button" class="btn btn-label-primary fas fa-user-alt-slash" data-bs-toggle="modal" data-bs-target="#modalBloquearCliente"  ></button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Jennifer Chang</td>
-                                                    <td>543.210.987-65</td>
-                                                    <td>jennifer.chang@email.com</td>
-                                                    <td>(21) 91345-9876</td>
-                                                    <td>Singapore</td>
-                                                    <td>SGP</td>
-                                                    <td>Física</td>
-                                                    <td>
-                                                        <button type="button" class="btn btn-label-primary fas fa-eye" data-bs-toggle="modal" data-bs-target="#modalMostrarCliente" ></button>
-                                                        <button type="button" class="btn btn-label-primary fas fa-edit" data-bs-toggle="modal" data-bs-target="#modalEditCliente" ></button>
-                                                        <button type="button" class="btn btn-label-primary fas fa-trash-alt" data-bs-toggle="modal" data-bs-target="#modalExcluirCliente"  ></button>
-                                                        <button type="button" class="btn btn-label-primary fas fa-user-alt-slash" data-bs-toggle="modal" data-bs-target="#modalBloquearCliente"  ></button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Brenden Wagner</td>
-                                                    <td>678.543.210-99</td>
-                                                    <td>brenden.wagner@email.com</td>
-                                                    <td>(22) 98734-1234</td>
-                                                    <td>San Francisco</td>
-                                                    <td>SF</td>
-                                                    <td>Física</td>
-                                                    <td>
-                                                        <button type="button" class="btn btn-label-primary fas fa-eye" data-bs-toggle="modal" data-bs-target="#modalMostrarCliente" ></button>
-                                                        <button type="button" class="btn btn-label-primary fas fa-edit" data-bs-toggle="modal" data-bs-target="#modalEditCliente" ></button>
-                                                        <button type="button" class="btn btn-label-primary fas fa-trash-alt" data-bs-toggle="modal" data-bs-target="#modalExcluirCliente"  ></button>
-                                                        <button type="button" class="btn btn-label-primary fas fa-user-alt-slash" data-bs-toggle="modal" data-bs-target="#modalBloquearCliente"  ></button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Fiona Green</td>
-                                                    <td>11.234.567/0001-11</td>
-                                                    <td>fiona.green@empresa.com</td>
-                                                    <td>(21) 99876-3456</td>
-                                                    <td>San Francisco</td>
-                                                    <td>SF</td>
-                                                    <td>Jurídica</td>
-                                                    <td>
-                                                        <button type="button" class="btn btn-label-primary fas fa-eye" data-bs-toggle="modal" data-bs-target="#modalMostrarCliente" ></button>
-                                                        <button type="button" class="btn btn-label-primary fas fa-edit" data-bs-toggle="modal" data-bs-target="#modalEditCliente" ></button>
-                                                        <button type="button" class="btn btn-label-primary fas fa-trash-alt" data-bs-toggle="modal" data-bs-target="#modalExcluirCliente"  ></button>
-                                                        <button type="button" class="btn btn-label-primary fas fa-user-alt-slash" data-bs-toggle="modal" data-bs-target="#modalBloquearCliente"  ></button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Shou Itou</td>
-                                                    <td>123.789.456-22</td>
-                                                    <td>shou.itou@email.com</td>
-                                                    <td>(11) 91234-5678</td>
-                                                    <td>Tokyo</td>
-                                                    <td>TKY</td>
-                                                    <td>Física</td>
-                                                    <td>
-                                                        <button type="button" class="btn btn-label-primary fas fa-eye" data-bs-toggle="modal" data-bs-target="#modalMostrarCliente" ></button>
-                                                        <button type="button" class="btn btn-label-primary fas fa-edit" data-bs-toggle="modal" data-bs-target="#modalEditCliente" ></button>
-                                                        <button type="button" class="btn btn-label-primary fas fa-trash-alt" data-bs-toggle="modal" data-bs-target="#modalExcluirCliente"  ></button>
-                                                        <button type="button" class="btn btn-label-primary fas fa-user-alt-slash" data-bs-toggle="modal" data-bs-target="#modalBloquearCliente"  ></button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Michelle House</td>
-                                                    <td>987.456.123-33</td>
-                                                    <td>michelle.house@email.com</td>
-                                                    <td>(19) 93210-9876</td>
-                                                    <td>Sidney</td>
-                                                    <td>SYD</td>
-                                                    <td>Física</td>
-                                                    <td>
-                                                        <button type="button" class="btn btn-label-primary fas fa-eye" data-bs-toggle="modal" data-bs-target="#modalMostrarCliente" ></button>
-                                                        <button type="button" class="btn btn-label-primary fas fa-edit" data-bs-toggle="modal" data-bs-target="#modalEditCliente" ></button>
-                                                        <button type="button" class="btn btn-label-primary fas fa-trash-alt" data-bs-toggle="modal" data-bs-target="#modalExcluirCliente"  ></button>
-                                                        <button type="button" class="btn btn-label-primary fas fa-user-alt-slash" data-bs-toggle="modal" data-bs-target="#modalBloquearCliente"  ></button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Suki Burks</td>
-                                                    <td>111.222.333-44</td>
-                                                    <td>suki.burks@email.com</td>
-                                                    <td>(18) 99876-5432</td>
-                                                    <td>London</td>
-                                                    <td>LND</td>
-                                                    <td>Física</td>
-                                                    <td>
-                                                        <button type="button" class="btn btn-label-primary fas fa-eye" data-bs-toggle="modal" data-bs-target="#modalMostrarCliente" ></button>
-                                                        <button type="button" class="btn btn-label-primary fas fa-edit" data-bs-toggle="modal" data-bs-target="#modalEditCliente" ></button>
-                                                        <button type="button" class="btn btn-label-primary fas fa-trash-alt" data-bs-toggle="modal" data-bs-target="#modalExcluirCliente"  ></button>
-                                                        <button type="button" class="btn btn-label-primary fas fa-user-alt-slash" data-bs-toggle="modal" data-bs-target="#modalBloquearCliente"  ></button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Prescott Bartlett</td>
-                                                    <td>222.333.444-55</td>
-                                                    <td>prescott.bartlett@email.com</td>
-                                                    <td>(15) 97654-4321</td>
-                                                    <td>New York</td>
-                                                    <td>NY</td>
-                                                    <td>Física</td>
-                                                    <td>
-                                                        <button type="button" class="btn btn-label-primary fas fa-eye" data-bs-toggle="modal" data-bs-target="#modalMostrarCliente" ></button>
-                                                        <button type="button" class="btn btn-label-primary fas fa-edit" data-bs-toggle="modal" data-bs-target="#modalEditCliente" ></button>
-                                                        <button type="button" class="btn btn-label-primary fas fa-trash-alt" data-bs-toggle="modal" data-bs-target="#modalExcluirCliente"  ></button>
-                                                        <button type="button" class="btn btn-label-primary fas fa-user-alt-slash" data-bs-toggle="modal" data-bs-target="#modalBloquearCliente"  ></button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Cedric Kelly</td>
-                                                    <td>456.789.012-33</td>
-                                                    <td>cedric.kelly@email.com</td>
-                                                    <td>(12) 97654-1234</td>
-                                                    <td>Tokyo</td>
-                                                    <td>TKY</td>
-                                                    <td>Física</td>
-                                                    <td>
-                                                        <button type="button" class="btn btn-label-primary fas fa-eye" data-bs-toggle="modal" data-bs-target="#modalMostrarCliente" ></button>
-                                                        <button type="button" class="btn btn-label-primary fas fa-edit" data-bs-toggle="modal" data-bs-target="#modalEditCliente" ></button>
-                                                        <button type="button" class="btn btn-label-primary fas fa-trash-alt" data-bs-toggle="modal" data-bs-target="#modalExcluirCliente"  ></button>
-                                                        <button type="button" class="btn btn-label-primary fas fa-user-alt-slash" data-bs-toggle="modal" data-bs-target="#modalBloquearCliente"  ></button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Zorita Serrano</td>
-                                                    <td>333.444.555-66</td>
-                                                    <td>zorita.serrano@email.com</td>
-                                                    <td>(14) 98765-6789</td>
-                                                    <td>San Francisco</td>
-                                                    <td>SF</td>
-                                                    <td>Física</td>
-                                                    <td>
-                                                        <button type="button" class="btn btn-label-primary fas fa-eye" data-bs-toggle="modal" data-bs-target="#modalMostrarCliente" ></button>
-                                                        <button type="button" class="btn btn-label-primary fas fa-edit" data-bs-toggle="modal" data-bs-target="#modalEditCliente" ></button>
-                                                        <button type="button" class="btn btn-label-primary fas fa-trash-alt" data-bs-toggle="modal" data-bs-target="#modalExcluirCliente"  ></button>
-                                                        <button type="button" class="btn btn-label-primary fas fa-user-alt-slash" data-bs-toggle="modal" data-bs-target="#modalBloquearCliente"  ></button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Jack Dawson</td>
-                                                    <td>654.321.789-88</td>
-                                                    <td>jack.dawson@email.com</td>
-                                                    <td>(19) 91234-6789</td>
-                                                    <td>London</td>
-                                                    <td>LND</td>
-                                                    <td>Física</td>
-                                                    <td>
-                                                        <button type="button" class="btn btn-label-primary fas fa-eye" data-bs-toggle="modal" data-bs-target="#modalMostrarCliente" ></button>
-                                                        <button type="button" class="btn btn-label-primary fas fa-edit" data-bs-toggle="modal" data-bs-target="#modalEditCliente" ></button>
-                                                        <button type="button" class="btn btn-label-primary fas fa-trash-alt" data-bs-toggle="modal" data-bs-target="#modalExcluirCliente"  ></button>
-                                                        <button type="button" class="btn btn-label-primary fas fa-user-alt-slash" data-bs-toggle="modal" data-bs-target="#modalBloquearCliente"  ></button>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                    <table id="alternative-page-datatable" class="table table-scrollable  w-100">
+                                        <thead>
+                                            <tr>
+                                                <th>Situação</th>
+                                                <th>Tomador</th>
+                                                <th>Razão Social</th>
+                                                <th>Emissor</th>
+                                                <th>Número</th>
+                                                <th>RPS</th>
+                                                <th>Nº RPS</th>
+                                                <th>Serviço (R$)</th>
+                                                <th>Desc. Cond(R$)</th>
+                                                <th>B.C. (R$)</th>
+                                                <th>Total (R$)</th>
+                                                <th>Aliq (%)</th>
+                                                <th>ISSQN(R$)</th>
+                                                <th>Retido</th>
+                                                <th>Emissão</th>
+                                                <th>Comp.</th>
+                                                <th>Exigibilidade</th>
+                                                <th>Incidência</th>
+                                                <th>Atividade</th>
+                                                <th>Tipo</th>
+                                                <th>Débito</th>
+                                                <th>Opções</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Normal</td>
+                                                <td>01.540.469/0001-86</td>
+                                                <td>CURUMIMGO LOCAÇÕES LTDA-ME</td>
+                                                <td>36.429.506/0001-00</td>
+                                                <td>20240000000000160</td>
+                                                <td>NÃO</td>
+                                                <td>0</td>
+                                                <td>50,00</td>
+                                                <td>0,00</td>
+                                                <td>50,00</td>
+                                                <td>50,00</td>
+                                                <td>2,00</td>
+                                                <td>1,00</td>
+                                                <td>NÃO</td>
+                                                <td>08/10/2024</td>
+                                                <td>10/2024</td>
+                                                <td>Exigível</td>
+                                                <td>Uberaba/MG</td>
+                                                <td>0103</td>
+                                                <td>Normal</td>
+                                                <td>-</td>
+                                                <td>
+                                                    <div class="btn-group">
+                                                      <button type="button" class="btn btn-label-primary fas fa-eye" data-bs-toggle="modal" data-bs-target="#modalMostrarCliente" ></button>
+                                                      <button type="button" class="btn btn-label-primary fas fa-edit" data-bs-toggle="modal" data-bs-target="#modalEditCliente" ></button>
+                                                      <button type="button" class="btn btn-label-primary fas fa-trash-alt" data-bs-toggle="modal" data-bs-target="#modalExcluirCliente"  ></button>
+                                                      <button type="button" class="btn btn-label-primary fas fa-user-alt-slash" data-bs-toggle="modal" data-bs-target="#modalBloquearCliente"  ></button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>23.157.506/0001-04</td>
+                                                <td>CONG IRMÃS CARMI MIS STA T MJ JESUS</td>
+                                                <td>36.429.506/0001-00</td>
+                                                <td>20240000000000158</td>
+                                                <td>NÃO</td>
+                                                <td>0</td>
+                                                <td>180,00</td>
+                                                <td>0,00</td>
+                                                <td>180,00</td>
+                                                <td>180,00</td>
+                                                <td>2,00</td>
+                                                <td>3,60</td>
+                                                <td>NÃO</td>
+                                                <td>08/10/2024</td>
+                                                <td>10/2024</td>
+                                                <td>Exigível</td>
+                                                <td>Uberaba/MG</td>
+                                                <td>0103</td>
+                                                <td>Normal</td>
+                                                <td>-</td>
+                                                <td>
+                                                    <button type="button" class="btn btn-label-primary fas fa-eye" data-bs-toggle="modal" data-bs-target="#modalMostrarCliente" ></button>
+                                                    <button type="button" class="btn btn-label-primary fas fa-edit" data-bs-toggle="modal" data-bs-target="#modalEditCliente" ></button>
+                                                    <button type="button" class="btn btn-label-primary fas fa-trash-alt" data-bs-toggle="modal" data-bs-target="#modalExcluirCliente"  ></button>
+                                                    <button type="button" class="btn btn-label-primary fas fa-user-alt-slash" data-bs-toggle="modal" data-bs-target="#modalBloquearCliente"  ></button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>23.157.506/0009-61</td>
+                                                <td>CONGREGAÇÃO DAS IRMÃS CARMELIT</td>
+                                                <td>36.429.506/0001-00</td>
+                                                <td>20240000000000158</td>
+                                                <td>NÃO</td>
+                                                <td>0</td>
+                                                <td>328,00</td>
+                                                <td>0,00</td>
+                                                <td>328,00</td>
+                                                <td>328,00</td>
+                                                <td>2,00</td>
+                                                <td>6,56</td>
+                                                <td>NÃO</td>
+                                                <td>08/10/2024</td>
+                                                <td>10/2024</td>
+                                                <td>Exigível</td>
+                                                <td>Uberaba/MG</td>
+                                                <td>0103</td>
+                                                <td>Normal</td>
+                                                <td>-</td>
+                                                <td>
+                                                    <button type="button" class="btn btn-label-primary fas fa-eye" data-bs-toggle="modal" data-bs-target="#modalMostrarCliente" ></button>
+                                                    <button type="button" class="btn btn-label-primary fas fa-edit" data-bs-toggle="modal" data-bs-target="#modalEditCliente" ></button>
+                                                    <button type="button" class="btn btn-label-primary fas fa-trash-alt" data-bs-toggle="modal" data-bs-target="#modalExcluirCliente"  ></button>
+                                                    <button type="button" class="btn btn-label-primary fas fa-user-alt-slash" data-bs-toggle="modal" data-bs-target="#modalBloquearCliente"  ></button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>15.487.956/0001-37</td>
+                                                <td>BERENICE LARA PINTO DAMETTO LOCADORA</td>
+                                                <td>36.429.506/0001-00</td>
+                                                <td>20240000000000157</td>
+                                                <td>NÃO</td>
+                                                <td>0</td>
+                                                <td>120,00</td>
+                                                <td>0,00</td>
+                                                <td>120,00</td>
+                                                <td>120,00</td>
+                                                <td>2,00</td>
+                                                <td>2,40</td>
+                                                <td>NÃO</td>
+                                                <td>08/10/2024</td>
+                                                <td>10/2024</td>
+                                                <td>Exigível</td>
+                                                <td>Uberaba/MG</td>
+                                                <td>0103</td>
+                                                <td>Normal</td>
+                                                <td>-</td>
+                                                <td>
+                                                    <button type="button" class="btn btn-label-primary fas fa-eye" data-bs-toggle="modal" data-bs-target="#modalMostrarCliente" ></button>
+                                                    <button type="button" class="btn btn-label-primary fas fa-edit" data-bs-toggle="modal" data-bs-target="#modalEditCliente" ></button>
+                                                    <button type="button" class="btn btn-label-primary fas fa-trash-alt" data-bs-toggle="modal" data-bs-target="#modalExcluirCliente"  ></button>
+                                                    <button type="button" class="btn btn-label-primary fas fa-user-alt-slash" data-bs-toggle="modal" data-bs-target="#modalBloquearCliente"  ></button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Normal</td>
+                                                <td>01.540.469/0001-86</td>
+                                                <td>CURUMIMGO LOCAÇÕES LTDA-ME</td>
+                                                <td>36.429.506/0001-00</td>
+                                                <td>20240000000000160</td>
+                                                <td>NÃO</td>
+                                                <td>0</td>
+                                                <td>50,00</td>
+                                                <td>0,00</td>
+                                                <td>50,00</td>
+                                                <td>50,00</td>
+                                                <td>2,00</td>
+                                                <td>1,00</td>
+                                                <td>NÃO</td>
+                                                <td>08/10/2024</td>
+                                                <td>10/2024</td>
+                                                <td>Exigível</td>
+                                                <td>Uberaba/MG</td>
+                                                <td>0103</td>
+                                                <td>Normal</td>
+                                                <td>-</td>
+                                                <td>
+                                                    <div class="btn-group">
+                                                      <button type="button" class="btn btn-label-primary fas fa-eye" data-bs-toggle="modal" data-bs-target="#modalMostrarCliente" ></button>
+                                                      <button type="button" class="btn btn-label-primary fas fa-edit" data-bs-toggle="modal" data-bs-target="#modalEditCliente" ></button>
+                                                      <button type="button" class="btn btn-label-primary fas fa-trash-alt" data-bs-toggle="modal" data-bs-target="#modalExcluirCliente"  ></button>
+                                                      <button type="button" class="btn btn-label-primary fas fa-user-alt-slash" data-bs-toggle="modal" data-bs-target="#modalBloquearCliente"  ></button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>23.157.506/0001-04</td>
+                                                <td>CONG IRMÃS CARMI MIS STA T MJ JESUS</td>
+                                                <td>36.429.506/0001-00</td>
+                                                <td>20240000000000158</td>
+                                                <td>NÃO</td>
+                                                <td>0</td>
+                                                <td>180,00</td>
+                                                <td>0,00</td>
+                                                <td>180,00</td>
+                                                <td>180,00</td>
+                                                <td>2,00</td>
+                                                <td>3,60</td>
+                                                <td>NÃO</td>
+                                                <td>08/10/2024</td>
+                                                <td>10/2024</td>
+                                                <td>Exigível</td>
+                                                <td>Uberaba/MG</td>
+                                                <td>0103</td>
+                                                <td>Normal</td>
+                                                <td>-</td>
+                                                <td>
+                                                    <button type="button" class="btn btn-label-primary fas fa-eye" data-bs-toggle="modal" data-bs-target="#modalMostrarCliente" ></button>
+                                                    <button type="button" class="btn btn-label-primary fas fa-edit" data-bs-toggle="modal" data-bs-target="#modalEditCliente" ></button>
+                                                    <button type="button" class="btn btn-label-primary fas fa-trash-alt" data-bs-toggle="modal" data-bs-target="#modalExcluirCliente"  ></button>
+                                                    <button type="button" class="btn btn-label-primary fas fa-user-alt-slash" data-bs-toggle="modal" data-bs-target="#modalBloquearCliente"  ></button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>23.157.506/0009-61</td>
+                                                <td>CONGREGAÇÃO DAS IRMÃS CARMELIT</td>
+                                                <td>36.429.506/0001-00</td>
+                                                <td>20240000000000158</td>
+                                                <td>NÃO</td>
+                                                <td>0</td>
+                                                <td>328,00</td>
+                                                <td>0,00</td>
+                                                <td>328,00</td>
+                                                <td>328,00</td>
+                                                <td>2,00</td>
+                                                <td>6,56</td>
+                                                <td>NÃO</td>
+                                                <td>08/10/2024</td>
+                                                <td>10/2024</td>
+                                                <td>Exigível</td>
+                                                <td>Uberaba/MG</td>
+                                                <td>0103</td>
+                                                <td>Normal</td>
+                                                <td>-</td>
+                                                <td>
+                                                    <button type="button" class="btn btn-label-primary fas fa-eye" data-bs-toggle="modal" data-bs-target="#modalMostrarCliente" ></button>
+                                                    <button type="button" class="btn btn-label-primary fas fa-edit" data-bs-toggle="modal" data-bs-target="#modalEditCliente" ></button>
+                                                    <button type="button" class="btn btn-label-primary fas fa-trash-alt" data-bs-toggle="modal" data-bs-target="#modalExcluirCliente"  ></button>
+                                                    <button type="button" class="btn btn-label-primary fas fa-user-alt-slash" data-bs-toggle="modal" data-bs-target="#modalBloquearCliente"  ></button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>15.487.956/0001-37</td>
+                                                <td>BERENICE LARA PINTO DAMETTO LOCADORA</td>
+                                                <td>36.429.506/0001-00</td>
+                                                <td>20240000000000157</td>
+                                                <td>NÃO</td>
+                                                <td>0</td>
+                                                <td>120,00</td>
+                                                <td>0,00</td>
+                                                <td>120,00</td>
+                                                <td>120,00</td>
+                                                <td>2,00</td>
+                                                <td>2,40</td>
+                                                <td>NÃO</td>
+                                                <td>08/10/2024</td>
+                                                <td>10/2024</td>
+                                                <td>Exigível</td>
+                                                <td>Uberaba/MG</td>
+                                                <td>0103</td>
+                                                <td>Normal</td>
+                                                <td>-</td>
+                                                <td>
+                                                    <button type="button" class="btn btn-label-primary fas fa-eye" data-bs-toggle="modal" data-bs-target="#modalMostrarCliente" ></button>
+                                                    <button type="button" class="btn btn-label-primary fas fa-edit" data-bs-toggle="modal" data-bs-target="#modalEditCliente" ></button>
+                                                    <button type="button" class="btn btn-label-primary fas fa-trash-alt" data-bs-toggle="modal" data-bs-target="#modalExcluirCliente"  ></button>
+                                                    <button type="button" class="btn btn-label-primary fas fa-user-alt-slash" data-bs-toggle="modal" data-bs-target="#modalBloquearCliente"  ></button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div> <!-- end card body-->
                             </div> <!-- end card -->
                         </div><!-- end col-->
                     </div>
                     <!-- end row-->
-                    <div class="modal fade " id="modalCadastrarCliente">
+                    <div class="modal fade " id="modalCadastrarNF">
                         <div class="modal-dialog modal-lg modal-dialog-centered">
                             <div class="modal-content ">
                                 <div class="modal-header">
-                                    <h4 class="modal-title">Cadastro de Clientes</h4><button type="button" class="btn btn-sm btn-label-danger btn-icon" data-bs-dismiss="modal"><i class="mdi mdi-close"></i></button>
+                                    <h4 class="modal-title">Importar Nota Fiscal</h4><button type="button" class="btn btn-sm btn-label-danger btn-icon" data-bs-dismiss="modal"><i class="mdi mdi-close"></i></button>
                                 </div>
                                 <div class="modal-body">
                                     <div class="card-body">
-                                        <div class="nav nav-pills nav-justified widgets-nav mb-4" id="income-tab">
-                                            <a class="nav-item nav-link active" id="pessoa-fisica-tab" data-bs-toggle="tab" href="#pessoa-fisica">Pessoa Física</a>
-                                            <a class="nav-item nav-link" id="pessoa-juridica-tab" data-bs-toggle="tab" href="#pessoa-juridica">Pessoa Jurídica</a>
-                                        </div>
-                                        <div class="tab-content p-0" id="income-tabContent">
-                                            <div class="tab-pane fade show active" id="pessoa-fisica">
-                                                <div class="col-xl-12" >
-                                                    <div class="card">
-                                                        <div class="card-body mt-3 mb-3">
-                                                            <form class="row g-3">
-                                                                <div class="col-md-6"><label for="nome" class="form-label">Nome</label> <input type="text" class="form-control" id="nome" placeholder="Nome" required></div>
-                                                                <div class="col-md-6"><label for="sobrenome" class="form-label">Sobrenome</label> <input type="text" class="form-control" id="sobrenome" placeholder="Sobrenome" required></div>
-                                                                <div class="col-md-6"><label for="cpf" class="form-label">CPF</label> <input type="text" class="form-control" id="cpf" required></div>
-                                                                <div class="col-md-6"><label for="data_nascimento" class="form-label">Data de Nascimento</label> <input type="text" class="form-control" id="datepicker-2" placeholder="Select date" required></div>
-                                                                <div class="col-md-6">
-                                                                    <label for="email" >Email</label>
-                                                                    <div class="input-group mt-0">
-                                                                        <div class="input-group-text">
-                                                                            <i class="fa fa-envelope"></i>
-                                                                        </div>
-                                                                        <input type="email" class="form-control" name="email" placeholder="Insira seu Email"  required/>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-6"><label for="telefone">Telefone</label> <input data-parsley-type="number" type="text" id="telefone" class="form-control" required placeholder="Somente números" /></div>
-                                                                <div class="col-md-2"><label for="cep" class="form-label">CEP</label> <input type="text" class="form-control" id="cep" required/></div>
-                                                                <div class="col-md-6"><label for="endereco" class="form-label">Endereço</label> <input type="text" class="form-control" id="endereco" required placeholder="Rua" /></div>
-                                                                <div class="col-md-2"><label for="numero" class="form-label">Número</label> <input type="text" class="form-control" id="numero" required /></div>
-                                                                <div class="col-md-2"><label for="complemento" class="form-label">Complemento</label> <input type="text" class="form-control" id="complemento" /></div>
-                                                                <div class="col-md-4"><label for="bairro" class="form-label">Bairro</label> <input type="text" class="form-control" id="bairro" required /></div>
-                                                                <div class="col-md-4"><label for="cidade" class="form-label">Cidade</label> <input type="text" class="form-control" id="cidade" required/></div>
-                                                                <div class="dropup col-md-4">
-                                                                    <label for="estados" class="form-label">Estado</label>
-                                                                    <select id="estados" name="estados" class="form-select estado-select" required="required">
-                                                                        <option selected="selected">Selecione</option>
-                                                                    </select>
-                                                                </div>
-                                                                <div class="col-10 mt-4"><button type="submit" class="btn btn-primary btn-widest btn-lg float-end">Cadastrar</button></div>
-                                                                <div class="col-2 mt-4"><button data-bs-dismiss="modal" class="btn btn-outline-danger btn-widest btn-lg float-end">Cancelar</button></div>
-                                                            </form>
-                                                        </div>
-                                                    </div>
-                                                </div> <!-- end col -->
-                                            </div>
-                                        </div>
-                                        <div class="tab-content p-0" id="income-tabContent">
-                                            <div class="tab-pane fade" id="pessoa-juridica">
-                                                <div class="col-xl-12" >
-                                                <div class="card">
-                                                    <div class="card-body mt-3 mb-3">
-                                                        <form class="row g-3">
-                                                            <div class="col-md-6"><label for="razao_social" class="form-label">Razão Social</label> <input type="text" class="form-control" id="razao_social" required></div>
-                                                            <div class="col-md-6"><label for="nome_fantasia" class="form-label">Nome Fantasia</label> <input type="text" class="form-control" id="nome_fantasia" required></div>
-                                                            <div class="col-md-6"><label for="cnpj" class="form-label">CNPJ</label> <input type="text" class="form-control" id="cnpj" required></div>
-                                                            <div class="col-md-6"><label for="data_fundacao" class="form-label">Data de Fundação</label> <input type="text" class="form-control" id="datepicker-1" required></div>
-                                                            <div class="col-md-6">
-                                                                <label for="email" >Email</label>
-                                                                <div class="input-group mt-0">
-                                                                    <div class="input-group-text">
-                                                                        <i class="fa fa-envelope"></i>
-                                                                    </div>
-                                                                    <input type="email" class="form-control" name="email" placeholder="Insira seu Email"  required/>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-6"><label for="telefone">Telefone</label> <input data-parsley-type="number" type="text" id="telefone" class="form-control" required placeholder="Somente números" /></div>
-                                                            <div class="col-md-2"><label for="cep" class="form-label">CEP</label> <input type="text" class="form-control" id="cep" required /></div>
-                                                            <div class="col-md-6"><label for="endereco" class="form-label">Endereço</label> <input type="text" class="form-control" id="endereco" placeholder="Rua" required/></div>
-                                                            <div class="col-md-2"><label for="numero" class="form-label">Número</label> <input type="text" class="form-control" id="numero"  required/></div>
-                                                            <div class="col-md-2"><label for="complemento" class="form-label">Complemento</label> <input type="text" class="form-control" id="complemento" /></div>
-                                                            <div class="col-md-4"><label for="bairro" class="form-label">Bairro</label> <input type="text" class="form-control" id="bairro" required/></div>
-                                                            <div class="col-md-4"><label for="cidade" class="form-label">Cidade</label> <input type="text" class="form-control" id="cidade" required/></div>
-                                                            <div class="dropup col-md-4">
-                                                                <label for="estados" class="form-label">Estado</label>
-                                                                <select id="estados" name="estados" class="form-select estado-select" required="required">
-                                                                    <option selected="selected">Selecione</option>
-                                                                </select>
-                                                            </div>
-                                                            <div class="col-10 mt-4"><button type="submit" class="btn btn-primary btn-widest btn-lg float-end">Cadastrar</button></div>
-                                                            <div class="col-2 mt-4"><button data-bs-dismiss="modal" class="btn btn-outline-danger btn-widest btn-lg float-end">Cancelar</button></div>
-                                                        </form>
+                                        <div class="col-xl-12" >
+                                            <div class="card">
+                                                <div class="card-body mt-3 mb-3">
+                                                    <div class="input-group">
+                                                        <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload"  accept=".jpg, .jpeg, .png"  />
+                                                        <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Salvar</button>
                                                     </div>
                                                 </div>
-                                            </div> <!-- end col -->
                                             </div>
-                                        </div>
+                                        </div> <!-- end col -->
                                     </div><!-- end card body-->
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-outline-danger  float-end" data-bs-dismiss="modal">Cancelar</button>
                                 </div>
                             </div>
                         </div>
@@ -1499,7 +1393,6 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-    
     <!-- JAVASCRIPT -->
     <script src="assets/libs/jquery/jquery.min.js"></script>
     <script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
@@ -1541,9 +1434,6 @@
     <script src="assets/js/function.js"></script>
     <script src="assets/js/app.js"></script>
 
-    <!-- Bootstrap datepicker -->
-    <script src="assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
-    <script src="assets/js/pages/form-datepicker.init.js"></script>
     </body>
 
 </html>
