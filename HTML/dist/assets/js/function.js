@@ -1,8 +1,3 @@
-$('#modal8').on('shown.bs.modal', function () {
-    $('.estados-select').select2({
-        dropdownParent: $('#modal8')
-    });
-});
 
 const estados = [
     { sigla: "AC", nome: "Acre" },
@@ -42,4 +37,16 @@ document.querySelectorAll('.estado-select').forEach(select => {
         select.appendChild(option);
     });
 });
+
+
+$(document).ready(function() {
+    $('#modalMostrarCliente').on('show.bs.modal', function () {
+        $('.estado-select').prop('disabled', true);
+    });
+
+    $('#modalMostrarCliente').on('hide.bs.modal', function () {
+        $('.estado-select').prop('disabled', false);
+    });
+});
+
 

@@ -980,23 +980,64 @@
                         <div class="modal-dialog modal-lg modal-dialog-centered">
                             <div class="modal-content ">
                                 <div class="modal-header">
-                                    <h5 class="modal-title">Cadastro de Clientes</h5><button type="button" class="btn btn-sm btn-label-danger btn-icon" data-bs-dismiss="modal"><i class="mdi mdi-close"></i></button>
+                                    <h4 class="modal-title">Cadastro de Clientes</h4><button type="button" class="btn btn-sm btn-label-danger btn-icon" data-bs-dismiss="modal"><i class="mdi mdi-close"></i></button>
                                 </div>
+                                <div class="modal-body">
                                     <div class="card-body">
                                         <div class="nav nav-pills nav-justified widgets-nav mb-4" id="income-tab">
                                             <a class="nav-item nav-link active" id="pessoa-fisica-tab" data-bs-toggle="tab" href="#pessoa-fisica">Pessoa Física</a>
                                             <a class="nav-item nav-link" id="pessoa-juridica-tab" data-bs-toggle="tab" href="#pessoa-juridica">Pessoa Jurídica</a>
                                         </div>
-                                    <div class="tab-content p-0" id="income-tabContent">
-                                        <div class="tab-pane fade show active" id="pessoa-fisica">
-                                            <div class="col-xl-12" >
+                                        <div class="tab-content p-0" id="income-tabContent">
+                                            <div class="tab-pane fade show active" id="pessoa-fisica">
+                                                <div class="col-xl-12" >
+                                                    <div class="card">
+                                                        <div class="card-body mt-3 mb-3">
+                                                            <form class="row g-3">
+                                                                <div class="col-md-6"><label for="nome" class="form-label">Nome</label> <input type="text" class="form-control" id="nome" placeholder="Nome" required></div>
+                                                                <div class="col-md-6"><label for="sobrenome" class="form-label">Sobrenome</label> <input type="text" class="form-control" id="sobrenome" placeholder="Sobrenome" required></div>
+                                                                <div class="col-md-6"><label for="cpf" class="form-label">CPF</label> <input type="text" class="form-control" id="cpf" required></div>
+                                                                <div class="col-md-6"><label for="data_nascimento" class="form-label">Data de Nascimento</label> <input type="text" class="form-control" id="datepicker-1" required></div>
+                                                                <div class="col-md-6">
+                                                                    <label for="email" >Email</label>
+                                                                    <div class="input-group mt-0">
+                                                                        <div class="input-group-text">
+                                                                            <i class="fa fa-envelope"></i>
+                                                                        </div>
+                                                                        <input type="email" class="form-control" name="email" placeholder="Insira seu Email"  required/>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6"><label for="telefone">Telefone</label> <input data-parsley-type="number" type="text" id="telefone" class="form-control" required placeholder="Somente números" /></div>
+                                                                <div class="col-md-2"><label for="cep" class="form-label">CEP</label> <input type="text" class="form-control" id="cep" required/></div>
+                                                                <div class="col-md-6"><label for="endereco" class="form-label">Endereço</label> <input type="text" class="form-control" id="endereco" required placeholder="Rua" /></div>
+                                                                <div class="col-md-2"><label for="numero" class="form-label">Número</label> <input type="text" class="form-control" id="numero" required /></div>
+                                                                <div class="col-md-2"><label for="complemento" class="form-label">Complemento</label> <input type="text" class="form-control" id="complemento" /></div>
+                                                                <div class="col-md-4"><label for="bairro" class="form-label">Bairro</label> <input type="text" class="form-control" id="bairro" required /></div>
+                                                                <div class="col-md-4"><label for="cidade" class="form-label">Cidade</label> <input type="text" class="form-control" id="cidade" required/></div>
+                                                                <div class="dropup col-md-4">
+                                                                    <label for="estados" class="form-label">Estado</label>
+                                                                    <select id="estados" name="estados" class="form-select estado-select" required="required">
+                                                                        <option selected="selected">Selecione</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="col-10 mt-4"><button type="submit" class="btn btn-primary btn-widest btn-lg float-end">Cadastrar</button></div>
+                                                                <div class="col-2 mt-4"><button data-bs-dismiss="modal" class="btn btn-outline-danger btn-widest btn-lg float-end">Cancelar</button></div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div> <!-- end col -->
+                                            </div>
+                                        </div>
+                                        <div class="tab-content p-0" id="income-tabContent">
+                                            <div class="tab-pane fade" id="pessoa-juridica">
+                                                <div class="col-xl-12" >
                                                 <div class="card">
                                                     <div class="card-body mt-3 mb-3">
                                                         <form class="row g-3">
-                                                            <div class="col-md-6"><label for="nome" class="form-label">Nome</label> <input type="text" class="form-control" id="nome" placeholder="Nome" required></div>
-                                                            <div class="col-md-6"><label for="sobrenome" class="form-label">Sobrenome</label> <input type="text" class="form-control" id="sobrenome" placeholder="Sobrenome" required></div>
-                                                            <div class="col-md-6"><label for="cpf" class="form-label">CPF</label> <input type="text" class="form-control" id="cpf" required></div>
-                                                            <div class="col-md-6"><label for="data_nascimento" class="form-label">Data de Nascimento</label> <input type="text" class="form-control" id="datepicker-1" required></div>
+                                                            <div class="col-md-6"><label for="razao_social" class="form-label">Razão Social</label> <input type="text" class="form-control" id="razao_social" required></div>
+                                                            <div class="col-md-6"><label for="nome_fantasia" class="form-label">Nome Fantasia</label> <input type="text" class="form-control" id="nome_fantasia" required></div>
+                                                            <div class="col-md-6"><label for="cnpj" class="form-label">CNPJ</label> <input type="text" class="form-control" id="cnpj" required></div>
+                                                            <div class="col-md-6"><label for="data_fundacao" class="form-label">Data de Fundação</label> <input type="text" class="form-control" id="datepicker-1" required></div>
                                                             <div class="col-md-6">
                                                                 <label for="email" >Email</label>
                                                                 <div class="input-group mt-0">
@@ -1007,15 +1048,15 @@
                                                                 </div>
                                                             </div>
                                                             <div class="col-md-6"><label for="telefone">Telefone</label> <input data-parsley-type="number" type="text" id="telefone" class="form-control" required placeholder="Somente números" /></div>
-                                                            <div class="col-md-2"><label for="cep" class="form-label">CEP</label> <input type="text" class="form-control" id="cep" required/></div>
-                                                            <div class="col-md-6"><label for="endereco" class="form-label">Endereço</label> <input type="text" class="form-control" id="endereco" required placeholder="Rua" /></div>
-                                                            <div class="col-md-2"><label for="numero" class="form-label">Número</label> <input type="text" class="form-control" id="numero" required /></div>
+                                                            <div class="col-md-2"><label for="cep" class="form-label">CEP</label> <input type="text" class="form-control" id="cep" required /></div>
+                                                            <div class="col-md-6"><label for="endereco" class="form-label">Endereço</label> <input type="text" class="form-control" id="endereco" placeholder="Rua" required/></div>
+                                                            <div class="col-md-2"><label for="numero" class="form-label">Número</label> <input type="text" class="form-control" id="numero"  required/></div>
                                                             <div class="col-md-2"><label for="complemento" class="form-label">Complemento</label> <input type="text" class="form-control" id="complemento" /></div>
-                                                            <div class="col-md-4"><label for="bairro" class="form-label">Bairro</label> <input type="text" class="form-control" id="bairro" required /></div>
+                                                            <div class="col-md-4"><label for="bairro" class="form-label">Bairro</label> <input type="text" class="form-control" id="bairro" required/></div>
                                                             <div class="col-md-4"><label for="cidade" class="form-label">Cidade</label> <input type="text" class="form-control" id="cidade" required/></div>
                                                             <div class="dropup col-md-4">
-                                                                <label for="estados2" class="form-label">Estado</label>
-                                                                <select id="estados2" name="estados2" class="form-select estado-select" required="required">
+                                                                <label for="estados" class="form-label">Estado</label>
+                                                                <select id="estados" name="estados" class="form-select estado-select" required="required">
                                                                     <option selected="selected">Selecione</option>
                                                                 </select>
                                                             </div>
@@ -1025,16 +1066,72 @@
                                                     </div>
                                                 </div>
                                             </div> <!-- end col -->
+                                            </div>
                                         </div>
+                                    </div><!-- end card body-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="modalEditCliente">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content" id="modalEditClienteFisica" style="display: none;">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Editar Cliente - Pessoa Física</h4><button type="button" class="btn btn-sm btn-label-danger btn-icon" data-bs-dismiss="modal"><i class="mdi mdi-close"></i></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="card-body">
+                                        <div class="col-xl-12" >
+                                            <div class="card">
+                                                <div class="card-body mt-3 mb-3">
+                                                    <form class="row g-3">
+                                                        <div class="col-md-6"><label for="nome" class="form-label">Nome</label> <input type="text" class="form-control" id="nome" placeholder="Nome" required></div>
+                                                        <div class="col-md-6"><label for="sobrenome" class="form-label">Sobrenome</label> <input type="text" class="form-control" id="sobrenome" placeholder="Sobrenome" required></div>
+                                                        <div class="col-md-6"><label for="cpf" class="form-label">CPF</label> <input type="text" class="form-control" id="cpf" required></div>
+                                                        <div class="col-md-6"><label for="data_nascimento" class="form-label">Data de Nascimento</label> <input type="text" class="form-control" id="datepicker-1" required></div>
+                                                        <div class="col-md-6">
+                                                            <label for="email" >Email</label>
+                                                            <div class="input-group mt-0">
+                                                                <div class="input-group-text">
+                                                                    <i class="fa fa-envelope"></i>
+                                                                </div>
+                                                                <input type="email" class="form-control" name="email" placeholder="Insira seu Email"  required/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6"><label for="telefone">Telefone</label> <input data-parsley-type="number" type="text" id="telefone" class="form-control" required placeholder="Somente números" /></div>
+                                                        <div class="col-md-2"><label for="cep" class="form-label">CEP</label> <input type="text" class="form-control" id="cep" required/></div>
+                                                        <div class="col-md-6"><label for="endereco" class="form-label">Endereço</label> <input type="text" class="form-control" id="endereco" required placeholder="Rua" /></div>
+                                                        <div class="col-md-2"><label for="numero" class="form-label">Número</label> <input type="text" class="form-control" id="numero" required /></div>
+                                                        <div class="col-md-2"><label for="complemento" class="form-label">Complemento</label> <input type="text" class="form-control" id="complemento" /></div>
+                                                        <div class="col-md-4"><label for="bairro" class="form-label">Bairro</label> <input type="text" class="form-control" id="bairro" required /></div>
+                                                        <div class="col-md-4"><label for="cidade" class="form-label">Cidade</label> <input type="text" class="form-control" id="cidade" required/></div>
+                                                        <div class="dropup col-md-4">
+                                                            <label for="estados" class="form-label">Estado</label>
+                                                            <select id="estados" name="estados" class="form-select estado-select" required="required">
+                                                                <option selected="selected">Selecione</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-10 mt-4"><button type="submit" class="btn btn-primary btn-widest btn-lg float-end">Salvar</button></div>
+                                                        <div class="col-2 mt-4"><button data-bs-dismiss="modal" class="btn btn-outline-danger btn-widest btn-lg float-end">Cancelar</button></div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div> <!-- end col -->
                                     </div>
-                                    <div class="tab-content p-0" id="income-tabContent">
-                                        <div class="tab-pane fade" id="pessoa-juridica">
-                                            <div class="col-xl-12" >
+                                </div>
+                            </div>
+                            <div class="modal-content" id="modalEditClienteJuridica"  >
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Editar Cliente - Pessoa Jurídica</h4><button type="button" class="btn btn-sm btn-label-danger btn-icon" data-bs-dismiss="modal"><i class="mdi mdi-close"></i></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="card-body">    
+                                        <div class="col-xl-12" >
                                             <div class="card">
                                                 <div class="card-body mt-3 mb-3">
                                                     <form class="row g-3">
                                                         <div class="col-md-6"><label for="razao_social" class="form-label">Razão Social</label> <input type="text" class="form-control" id="razao_social" required></div>
-                                                        <div class="col-md-6"><label for="representante_legal" class="form-label">Representante Legal</label> <input type="text" class="form-control" id="representante_legal" required></div>
+                                                        <div class="col-md-6"><label for="nome_fantasia" class="form-label">Nome Fantasia</label> <input type="text" class="form-control" id="nome_fantasia" required></div>
                                                         <div class="col-md-6"><label for="cnpj" class="form-label">CNPJ</label> <input type="text" class="form-control" id="cnpj" required></div>
                                                         <div class="col-md-6"><label for="data_fundacao" class="form-label">Data de Fundação</label> <input type="text" class="form-control" id="datepicker-1" required></div>
                                                         <div class="col-md-6">
@@ -1054,66 +1151,131 @@
                                                         <div class="col-md-4"><label for="bairro" class="form-label">Bairro</label> <input type="text" class="form-control" id="bairro" required/></div>
                                                         <div class="col-md-4"><label for="cidade" class="form-label">Cidade</label> <input type="text" class="form-control" id="cidade" required/></div>
                                                         <div class="dropup col-md-4">
-                                                            <label for="estados2" class="form-label">Estado</label>
-                                                            <select id="estados2" name="estados2" class="form-select estado-select" required="required">
+                                                            <label for="estados" class="form-label">Estado</label>
+                                                            <select id="estados" name="estados" class="form-select estado-select" required="required">
                                                                 <option selected="selected">Selecione</option>
                                                             </select>
                                                         </div>
-                                                        <div class="col-10 mt-4"><button type="submit" class="btn btn-primary btn-widest btn-lg float-end">Cadastrar</button></div>
+                                                        <div class="col-10 mt-4"><button type="submit" class="btn btn-primary btn-widest btn-lg float-end">Salvar</button></div>
                                                         <div class="col-2 mt-4"><button data-bs-dismiss="modal" class="btn btn-outline-danger btn-widest btn-lg float-end">Cancelar</button></div>
                                                     </form>
                                                 </div>
                                             </div>
                                         </div> <!-- end col -->
-                                        </div>
-                                    </div>
+                                    </div><!-- end card body-->
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal fade" id="modalEditCliente">
-                        <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title">Editar Cliente</h5><button type="button" class="btn btn-sm btn-label-danger btn-icon" data-bs-dismiss="modal"><i class="mdi mdi-close"></i></button>
-                                </div>
-                                <div class="modal-body">
-                                    <p class="text-muted mb-0">Aqui virão os campos para edição dependendo se é pessoa física ou pessoa jurídica</p>
-                                </div>
-                                <div class="modal-footer"><button class="btn btn-primary btn-widest  float-end">Salvar</button> <button class="btn btn-outline-danger btn-widest  float-end" data-bs-dismiss="modal">Cancelar</button></div>
                             </div>
                         </div>
                     </div>
                     <div class="modal fade" id="modalMostrarCliente">
-                        <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content" id="modalMostrarClienteFisica" style="display: none;">
                                 <div class="modal-header">
-                                    <h5 class="modal-title">Cliente</h5><button type="button" class="btn btn-sm btn-label-danger btn-icon" data-bs-dismiss="modal"><i class="mdi mdi-close"></i></button>
+                                    <h4 class="modal-title">Nome do Cliente - Pessoa Física</h4><button type="button" class="btn btn-sm btn-label-danger btn-icon" data-bs-dismiss="modal"><i class="mdi mdi-close"></i></button>
                                 </div>
                                 <div class="modal-body">
-                                    <p class="text-muted mb-0">Aqui virão os campos para vizualizar todas as informações do cliente </p>
+                                    <div class="card-body">
+                                        <div class="col-xl-12" >
+                                            <div class="card">
+                                                <div class="card-body mt-3 mb-3">
+                                                    <form class="row g-3">
+                                                        <div class="col-md-6"><label for="nome" class="form-label">Nome</label> <input type="text" class="form-control" id="nome" placeholder="Nome" readonly></div>
+                                                        <div class="col-md-6"><label for="sobrenome" class="form-label">Sobrenome</label> <input type="text" class="form-control" id="sobrenome" placeholder="Sobrenome" readonly></div>
+                                                        <div class="col-md-6"><label for="cpf" class="form-label">CPF</label> <input type="text" class="form-control" id="cpf" readonly></div>
+                                                        <div class="col-md-6"><label for="data_nascimento" class="form-label">Data de Nascimento</label> <input type="text" class="form-control" id="datepicker-1" readonly></div>
+                                                        <div class="col-md-6">
+                                                            <label for="email" >Email</label>
+                                                            <div class="input-group mt-0">
+                                                                <div class="input-group-text">
+                                                                    <i class="fa fa-envelope"></i>
+                                                                </div>
+                                                                <input type="email" class="form-control" name="email" placeholder="Insira seu Email"  readonly/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6"><label for="telefone">Telefone</label> <input data-parsley-type="number" type="text" id="telefone" class="form-control" readonly placeholder="Somente números" /></div>
+                                                        <div class="col-md-2"><label for="cep" class="form-label">CEP</label> <input type="text" class="form-control" id="cep" readonly/></div>
+                                                        <div class="col-md-6"><label for="endereco" class="form-label">Endereço</label> <input type="text" class="form-control" id="endereco" readonly placeholder="Rua" /></div>
+                                                        <div class="col-md-2"><label for="numero" class="form-label">Número</label> <input type="text" class="form-control" id="numero" readonly /></div>
+                                                        <div class="col-md-2"><label for="complemento" class="form-label">Complemento</label> <input type="text" class="form-control" id="complemento" readonly/></div>
+                                                        <div class="col-md-4"><label for="bairro" class="form-label">Bairro</label> <input type="text" class="form-control" id="bairro" readonly /></div>
+                                                        <div class="col-md-4"><label for="cidade" class="form-label">Cidade</label> <input type="text" class="form-control" id="cidade" readonly/></div>
+                                                        <div class="dropup col-md-4">
+                                                            <label for="estados" class="form-label">Estado</label>
+                                                            <select id="estados" name="estados" class="form-select estado-select" required="readonly">
+                                                                <option selected="selected">Selecione</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-12 mt-4"><button type="button" data-bs-dismiss="modal" class="btn btn-outline-danger btn-widest btn-lg float-end">Cancelar</button></div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div> <!-- end col -->
+                                    </div>
                                 </div>
-                                <div class="modal-footer"><button class="btn btn-primary btn-widest  float-end">Salvar</button> <button class="btn btn-outline-danger btn-widest  float-end" data-bs-dismiss="modal">Cancelar</button></div>
+                            </div>
+                            <div class="modal-content" id="modalMostrarClienteJuridica">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Nome do Cliente - Pessoa Jurídica</h4><button type="button" class="btn btn-sm btn-label-danger btn-icon" data-bs-dismiss="modal"><i class="mdi mdi-close"></i></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="card-body">
+                                        <div class="col-xl-12" >
+                                            <div class="card">
+                                                <div class="card-body mt-3 mb-3">
+                                                    <form class="row g-3">
+                                                        <div class="col-md-6"><label for="razao_social" class="form-label">Razão Social</label> <input type="text" class="form-control" id="razao_social" readonly></div>
+                                                        <div class="col-md-6"><label for="nome_fantasia" class="form-label">Nome Fantasia</label> <input type="text" class="form-control" id="nome_fantasia" readonly></div>
+                                                        <div class="col-md-6"><label for="cnpj" class="form-label">CNPJ</label> <input type="text" class="form-control" id="cnpj" readonly></div>
+                                                        <div class="col-md-6"><label for="data_fundacao" class="form-label">Data de Fundação</label> <input type="text" class="form-control" id="datepicker-1" readonly></div>
+                                                        <div class="col-md-6">
+                                                            <label for="email" >Email</label>
+                                                            <div class="input-group mt-0">
+                                                                <div class="input-group-text">
+                                                                    <i class="fa fa-envelope"></i>
+                                                                </div>
+                                                                <input type="email" class="form-control" name="email" placeholder="Insira seu Email"  readonly/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6"><label for="telefone">Telefone</label> <input data-parsley-type="number" type="text" id="telefone" class="form-control" readonly placeholder="Somente números" /></div>
+                                                        <div class="col-md-2"><label for="cep" class="form-label">CEP</label> <input type="text" class="form-control" id="cep" readonly /></div>
+                                                        <div class="col-md-6"><label for="endereco" class="form-label">Endereço</label> <input type="text" class="form-control" id="endereco" placeholder="Rua" readonly/></div>
+                                                        <div class="col-md-2"><label for="numero" class="form-label">Número</label> <input type="text" class="form-control" id="numero"  readonly/></div>
+                                                        <div class="col-md-2"><label for="complemento" class="form-label">Complemento</label> <input type="text" class="form-control" id="complemento" readonly /></div>
+                                                        <div class="col-md-4"><label for="bairro" class="form-label">Bairro</label> <input type="text" class="form-control" id="bairro" readonly/></div>
+                                                        <div class="col-md-4"><label for="cidade" class="form-label">Cidade</label> <input type="text" class="form-control" id="cidade" readonly/></div>
+                                                        <div class="dropup col-md-4">
+                                                            <label for="estados" class="form-label">Estado</label>
+                                                            <select id="estados" name="estados" class="form-select estado-select" required="required">
+                                                                <option selected="selected">Selecione</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-12 mt-4"><button type="button" data-bs-dismiss="modal" class="btn btn-outline-danger btn-widest btn-lg float-end">Cancelar</button></div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div> <!-- end col -->
+                                    </div><!-- end card body-->
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="modal fade" id="modalExcluirCliente">
-                        <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title">Tem certeza que deseja excluir esse cliente?</h5><button type="button" class="btn btn-sm btn-label-danger btn-icon" data-bs-dismiss="modal"><i class="mdi mdi-close"></i></button>
+                                    <h3 class="modal-title">Tem certeza que deseja excluir esse cliente?</h3><button type="button" class="btn btn-sm btn-label-danger  btn-icon" data-bs-dismiss="modal"><i class="mdi mdi-close"></i></button>
                                 </div>
-                                <div class="modal-footer"><button class="btn btn-primary btn-widest  float-end">Sim</button> <button class="btn btn-outline-danger btn-widest  float-end" data-bs-dismiss="modal">Cancelar</button></div>
+                                <div class="modal-footer"><button class="btn btn-primary btn-widest btn-lg float-end">Sim</button> <button class="btn btn-outline-danger btn-widest btn-lg float-end" data-bs-dismiss="modal">Cancelar</button></div>
                             </div>
                         </div>
                     </div>
                     <div class="modal fade" id="modalBloquearCliente">
-                        <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title">Tem certeza que deseja bloquear esse cliente?</h5><button type="button" class="btn btn-sm btn-label-danger btn-icon" data-bs-dismiss="modal"><i class="mdi mdi-close"></i></button>
+                                    <h3 class="modal-title">Tem certeza que deseja bloquear esse cliente?</h3><button type="button" class="btn btn-sm btn-label-danger btn-icon" data-bs-dismiss="modal"><i class="mdi mdi-close"></i></button>
                                 </div>
-                                <div class="modal-footer"><button class="btn btn-primary btn-widest float-end">Sim</button> <button class="btn btn-outline-danger btn-widest  float-end" data-bs-dismiss="modal">Cancelar</button></div>
+                                <div class="modal-footer"><button class="btn btn-primary btn-widest btn-lg float-end">Sim</button> <button class="btn btn-outline-danger btn-widest btn-lg float-end" data-bs-dismiss="modal">Cancelar</button></div>
                             </div>
                         </div>
                     </div>
@@ -1371,7 +1533,6 @@
         },
         pagingType:"simple_numbers",drawCallback:function(){$(".dataTables_paginate > .pagination").addClass("pagination"),$(".dataTables_length select").addClass("form-select form-select-sm")}}),$("#datatable-1").DataTable({responsive:!0,lengthMenu:[[5,10,25,50,-1],[5,10,25,50,"All"]]}),$(".dataTables_length select").addClass("form-select form-select-sm")});
 
-   
     </script>
     <script src="assets/js/function.js"></script>
     <script src="assets/js/app.js"></script>
