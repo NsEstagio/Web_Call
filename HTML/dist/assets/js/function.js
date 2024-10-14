@@ -51,17 +51,46 @@ $(document).ready(function() {
 
 
 $(document).ready(function() {
-    $('#modalCadastrarNF').on('shown.bs.modal', function () {
-        $('#datepicker-2').datepicker({
-            // Suas opções do datepicker
-            format: "dd/mm/yyyy",
-            startDate: "01-01-2015",
-            endDate: "01-01-2020",
-            todayBtn: "linked",
-            autoclose: true,
-            todayHighlight: true
-        });
+    $('#datepicker').datepicker({
+      // Outras configurações do datepicker
+      container: '#modalCadastrarUsuario' ,
+      format: 'dd/mm/yyyy'
     });
 });
 
+$(document).ready(function() {
+    $('#datepicker_editar').datepicker({
+      // Outras configurações do datepicker
+      container: '#modalEditarUsuario' ,
+      format: 'dd/mm/yyyy'
+    });
+});
+
+$(document).ready(function() {
+    $('#data_nascimento_fisica').datepicker({
+      container: '#pessoa-fisica',
+      format: 'dd/mm/yyyy'
+    });
+  });
+
+  $(document).ready(function() {
+    $('#data_fundacao_juridica').datepicker({
+      container: '#pessoa-juridica',
+      format: 'dd/mm/yyyy'
+    });
+  });
+
+  $(document).ready(function() {
+    $('#data_nascimento_fisica_ed').datepicker({
+      container: '#modalEditCliente',
+      format: 'dd/mm/yyyy'
+    });
+  });
+
+  $(document).ready(function() {
+    $('#data_fundacao_juridica_ed').datepicker({
+      container: '#modalEditCliente',
+      format: 'dd/mm/yyyy'
+    });
+  });
 
