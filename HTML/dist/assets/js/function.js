@@ -94,3 +94,11 @@ $(document).ready(function() {
     });
   });
 
+  $(document).ready(function(){
+    $('.datepicker').datepicker({
+        format: 'dd/mm/yyyy',   // Define o formato da data
+        autoclose: true,        // Fecha automaticamente o calendário após a seleção
+        todayHighlight: true    // Destaca a data atual no calendário
+    });
+  });
+

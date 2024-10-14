@@ -14,3 +14,140 @@
   z-index: 9999 !important;
 }
 
+
+
+#regForm {
+  background-color: #ffffff;
+  margin:  auto;
+  padding: 40px;
+  width: 99%;
+  min-width: 300px;
+}
+
+.h1-revisional {
+  text-align: center;  
+}
+
+/* Ajustes para o input */
+.input-revisional {
+  padding: 10px; /* Adiciona um espaçamento interno confortável */
+  font-size: 16px; /* Fonte maior para melhor legibilidade */
+  
+  box-sizing: border-box; /* Garante que o padding não cause overflow */
+  margin-bottom: 20px; /* Espaço inferior entre os campos */
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transição suave nas interações */
+}
+
+/* Ao focar no input */
+.input-revisional:focus {
+  border-color: #4CAF50; /* Muda a cor da borda quando o campo está focado */
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3); /* Adiciona uma leve sombra ao foco */
+  outline: none; /* Remove a borda padrão azul do foco */
+}
+
+/* Para o botão */
+.button-revisional {
+  background-color: #04AA6D; /* Cor de fundo do botão */
+  color: white; /* Cor do texto */
+  padding: 10px 20px; /* Padding para os botões */
+  font-size: 16px; /* Tamanho da fonte */
+  border: none; /* Remove borda */
+  border-radius: 4px; /* Cantos arredondados */
+  cursor: pointer; /* Cursor tipo pointer ao passar por cima */
+  margin: 10px 5px; /* Espaçamento entre os botões */
+  transition: background-color 0.3s ease-in-out; /* Transição suave na cor */
+}
+
+.button-revisional:hover {
+  background-color: #039658; /* Cor do botão ao passar o mouse por cima */
+}
+
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+
+
+#prevBtn {
+  background-color: #bbbbbb;
+}
+
+.stepper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin: 50px auto;
+}
+
+/* Estilo de cada etapa (círculo + texto) */
+.step {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  text-align: center;
+}
+
+/* O círculo numérico */
+.circle-revisional {
+  width: 40px;
+  height: 40px;
+  background-color: #ccc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 16px;
+}
+
+/* Estilo do número da etapa ativa */
+.step.active .circle-revisional {
+  background-color: #4CAF50; /* Cor ativa */
+}
+
+/* Texto abaixo de cada círculo */
+.label-revisional {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #888;
+}
+
+/* Linha conectando os círculos */
+.line {
+  flex-grow: 1;
+  height: 2px;
+  background-color: #e0e0e0;
+  margin: 0 10px;
+}
+
+/* Linha para a etapa ativa */
+.step.active ~ .line {
+  background-color: #4CAF50;
+}
+
+select.input-revisional {
+  width: 100%;
+  padding: 10px;
+  font-size: 17px;
+  
+  margin-top: 10px;
+}
+
+select.invalid {
+  background-color: #ffdddd;
+}
+
+#data-revisional {
+  width: 100% !important;
+}
+
+
