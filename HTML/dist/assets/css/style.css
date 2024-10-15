@@ -13,8 +13,10 @@
 .ui-datepicker {
   z-index: 9999 !important;
 }
-
-
+.table-wrapper {
+  overflow-x: auto; 
+  max-width: 100%;
+}
 
 #regForm {
   background-color: #ffffff;
@@ -28,52 +30,73 @@
   text-align: center;  
 }
 
-/* Ajustes para o input */
+.tox-promotion {
+  display: none; 
+}
+
+.tox-statusbar {
+  display: none; 
+}
+
 .input-revisional {
-  padding: 10px; /* Adiciona um espaçamento interno confortável */
-  font-size: 16px; /* Fonte maior para melhor legibilidade */
+  padding: 10px; 
+  font-size: 16px; 
   
-  box-sizing: border-box; /* Garante que o padding não cause overflow */
-  margin-bottom: 20px; /* Espaço inferior entre os campos */
-  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transição suave nas interações */
+  box-sizing: border-box; 
+  margin-bottom: 20px; 
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
 }
 
-/* Ao focar no input */
 .input-revisional:focus {
-  border-color: #4CAF50; /* Muda a cor da borda quando o campo está focado */
-  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3); /* Adiciona uma leve sombra ao foco */
-  outline: none; /* Remove a borda padrão azul do foco */
+  border-color: #4CAF50; 
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+  outline: none; 
 }
 
-/* Para o botão */
 .button-revisional {
-  background-color: #04AA6D; /* Cor de fundo do botão */
-  color: white; /* Cor do texto */
-  padding: 10px 20px; /* Padding para os botões */
-  font-size: 16px; /* Tamanho da fonte */
-  border: none; /* Remove borda */
-  border-radius: 4px; /* Cantos arredondados */
-  cursor: pointer; /* Cursor tipo pointer ao passar por cima */
-  margin: 10px 5px; /* Espaçamento entre os botões */
-  transition: background-color 0.3s ease-in-out; /* Transição suave na cor */
+  background-color: #04AA6D; 
+  color: white; 
+  padding: 10px 20px; 
+  font-size: 16px; 
+  border: none; 
+  border-radius: 4px; 
+  cursor: pointer; 
+  margin: 10px 5px; 
+  transition: background-color 0.3s ease-in-out; 
 }
 
 .button-revisional:hover {
-  background-color: #039658; /* Cor do botão ao passar o mouse por cima */
+  background-color: #039658; 
 }
 
+.import_box{
+  background-color: #fff;
+  padding: 3.5%;
+  width: 60%;
+  border: 2px solid #38c66c;
+  border-radius: 20px;
+  margin: 10px;
+  display: flex;
+  align-items: center; 
+  flex-direction: column; 
+  position: relative;
+  text-align: center; 
+  justify-content: center;
+}
 
-/* Mark input boxes that gets an error on validation: */
+.container-upload {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
 input.invalid {
   background-color: #ffdddd;
 }
 
-/* Hide all steps by default: */
 .tab {
   display: none;
 }
-
-
 
 #prevBtn {
   background-color: #bbbbbb;
@@ -87,7 +110,6 @@ input.invalid {
   margin: 50px auto;
 }
 
-/* Estilo de cada etapa (círculo + texto) */
 .step {
   display: flex;
   align-items: center;
@@ -96,7 +118,6 @@ input.invalid {
   text-align: center;
 }
 
-/* O círculo numérico */
 .circle-revisional {
   width: 40px;
   height: 40px;
@@ -109,19 +130,16 @@ input.invalid {
   font-size: 16px;
 }
 
-/* Estilo do número da etapa ativa */
 .step.active .circle-revisional {
-  background-color: #4CAF50; /* Cor ativa */
+  background-color: #4CAF50; 
 }
 
-/* Texto abaixo de cada círculo */
 .label-revisional {
   margin-top: 8px;
   font-size: 14px;
   color: #888;
 }
 
-/* Linha conectando os círculos */
 .line {
   flex-grow: 1;
   height: 2px;
@@ -129,7 +147,6 @@ input.invalid {
   margin: 0 10px;
 }
 
-/* Linha para a etapa ativa */
 .step.active ~ .line {
   background-color: #4CAF50;
 }
@@ -143,7 +160,7 @@ select.input-revisional {
 }
 
 select.invalid {
-  background-color: #ffdddd;
+  background-color: #ffe7e7;
 }
 
 #data-revisional {

@@ -102,3 +102,17 @@ $(document).ready(function() {
     });
   });
 
+
+  $(document).ready(function() {
+    $('.tox-promotion').hide(); 
+    $('.tox-promotion-link').hide(); 
+    $('.tox-statusbar__path').hide(); 
+    $('.tox-statusbar__path-item').hide(); 
+    $('.tox-statusbar').hide(); 
+    $('.tox-statusbar__branding').hide(); 
+
+    
+    $('.tox-statusbar__text-container').hide(); 
+  });
+
+
